@@ -39,6 +39,7 @@ $(document).keypress(function(event) {
       // $("#level-title").html("Level " + level);
    }
 });
+
 $(document).click(function(event) {
    if (!keyPressed) {
       keyPressed = true;
