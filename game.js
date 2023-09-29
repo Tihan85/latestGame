@@ -57,7 +57,7 @@ function checkAnswer(currentLevel) {
       setTimeout(() => {
          $("body").removeClass("game-over");
       }, 200);
-      document.body.style.backgroundImage = "url('./sounds/IMG_8558.jpg')"
+      document.body.style.backgroundImage = "url('./sounds/GeorgeIdiot.png')"
       setTimeout(() => {
          document.body.style.backgroundImage = "none";
       }, 2000);
