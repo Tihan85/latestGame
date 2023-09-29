@@ -85,7 +85,7 @@ function checkAnswer(currentLevel) {
    if (cont){
       setTimeout(() => {
          nextSequence();
-      }, 500);
+      }, 350);
       userClickPattern = [];
       count = 0;
    }
