@@ -39,6 +39,13 @@ $(document).keypress(function(event) {
       // $("#level-title").html("Level " + level);
    }
 });
+$(document).click(function(event) {
+   if (!keyPressed) {
+      keyPressed = true;
+      nextSequence();
+      // $("#level-title").html("Level " + level);
+   }
+});
 
 /* Checking the answers Step 8 */ 
 function checkAnswer(currentLevel) {
@@ -57,10 +64,20 @@ function checkAnswer(currentLevel) {
       setTimeout(() => {
          $("body").removeClass("game-over");
       }, 200);
-      document.body.style.backgroundImage = "url('./sounds/GeorgeIdiot.png')"
+
+      const overlay = document.getElementById('overlay');
+      document.body.style.backgroundImage = "none"
+      overlay.style.display = 'block';
+      overlay.innerHTML = '<img class="overlay-image" src="./sounds/GeorgeIdiot.png" alt="Overlay Image">';
       setTimeout(() => {
-         document.body.style.backgroundImage = "none";
+         document.body.style.backgroundImage = 'none';
+
+         // Hide the overlay after 1 second
+         overlay.style.display = 'none';
+         overlay.innerHTML = ''; // Clear the contents
       }, 2000);
+
+
       restart();
    }
    if (cont){
