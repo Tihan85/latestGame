@@ -77,9 +77,10 @@ function checkAnswer(currentLevel) {
          overlay.style.display = 'none';
          overlay.innerHTML = ''; // Clear the contents
       }, 2000);
-
-
-      restart();
+      setTimeout(() => {
+         restart();
+      }, 1000);
+      
    }
    if (cont){
       setTimeout(() => {
