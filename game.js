@@ -79,7 +79,7 @@ function checkAnswer(currentLevel) {
       }, 2000);
       setTimeout(() => {
          restart();
-      }, 1000);
+      },2000);
       
    }
    if (cont){
